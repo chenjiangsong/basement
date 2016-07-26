@@ -1,0 +1,25 @@
+{
+  "name": "basement",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chenjiangsong/basement.git"
+  },
+  "author": "cjs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chenjiangsong/basement/issues"
+  },
+  "homepage": "https://github.com/chenjiangsong/basement#readme",
+  "dependencies": {
+    "babel-core": "^6.11.4",
+    "express": "^4.14.0",
+    "jade": "^1.11.0"
+  }
+}
