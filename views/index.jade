@@ -1,5 +1,10 @@
 html
   head
-    title!= title
+    title= title
   body
-    h1!= message
+    h1= message
+    div#chenjiangsong
+        -if(commonTag=='vue')
+            router
+    script(src='/static/#{commonTag}_common.js')
+    //script(src='/static/#{staticTag}.js')

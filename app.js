@@ -8,6 +8,9 @@ app.set('view engine', 'jade');
 app.get('/', (req, res) => {
     res.render('./index', { title: 'Hey', message: 'Hello there!'})
 })
+
+app.use('/static', express.static('dist'))
+
 app.use('/vue',vue);
 
 app.listen(3000)
