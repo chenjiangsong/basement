@@ -1,7 +1,7 @@
 // import express from 'express'
 const express = require('express')
 const app = express()
-const vue = require('./vue/router.js')
+const vue = require('./vue/shell.js')
 
 app.set('view engine', 'jade');
 
