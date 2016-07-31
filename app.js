@@ -5,9 +5,9 @@ const vue = require('./vue/shell.js')
 
 app.set('view engine', 'jade');
 
-app.get('/', (req, res) => {
-    res.render('./index', { title: 'Hey', message: 'Hello there!'})
-})
+// app.get('/', (req, res) => {
+//     res.render('./index', { title: 'Hey', message: 'Hello there!'})
+// })
 
 app.use('/static', express.static('dist'))
 

@@ -5,11 +5,11 @@ const _ = require('underscore')
 let pageConfig = {};
 router.use((req, res, next) => {
   console.log('Time: ', Date.now())
-  pageConfig.commonTag = 'vue'
+  pageConfig.tag = 'vue'
   next()
 });
 
-router.get('/:tag', (req, res) => {
+router.get('/*', (req, res) => {
     console.log(req.params.tag);
     res.render('index',_.extend(pageConfig,{
         title:'vue',

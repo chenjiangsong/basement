@@ -3,8 +3,8 @@ html
     title= title
   body
     h1= message
-    div#chenjiangsong
-        -if(commonTag=='vue')
+    div#jesse
+        -if(tag=='vue')
             router-view
-    script(src='/static/#{commonTag}_common.js')
-    //script(src='/static/#{staticTag}.js')
+    script(src='/static/#{tag}_common.js')
+    script(src='/static/#{tag}_bundle.js')
