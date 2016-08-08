@@ -1,5 +1,5 @@
 function windowResize() {
-    var size = document.body.clientWidth
+    var size = document.documentElement.clientWidth
     var fontSizes
     if (size < 640) {
         fontSize = size / 3.2
