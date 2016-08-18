@@ -11,7 +11,7 @@ app.set('view engine', 'jade');
 
 app.use('/static', express.static('dist'))
 
-app.use('/vue',vue);
+app.use(vue);
 
 app.listen(3000)
 // module.exports = app

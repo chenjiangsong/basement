@@ -1,3 +1,5 @@
+
+
 Vue.use(vueRouter)
 
 var app  = Vue.extend({});
@@ -7,13 +9,9 @@ var router = new vueRouter({
     saveScrollPosition: true
 });
 
-var Foo = Vue.extend({
-  template: '<p>This is foo!</p>'
-})
-
 router.map({
     '/index': {
-        component: Foo
+        component: require('../components/index.vue')
     }
 })
 

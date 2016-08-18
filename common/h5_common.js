@@ -4,7 +4,7 @@ function windowResize() {
     if (size < 640) {
         fontSize = size / 3.2
     } else {
-        fontSize = 640/3.2
+        fontSize = 640 / 3.2
     }
     document.documentElement.style.fontSize = fontSize
 }

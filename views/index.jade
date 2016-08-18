@@ -1,8 +1,8 @@
 html
   head
     title= title
+    link(rel='stylesheet',href='/static/#{tag}_bundle.css')
   body
-    h1= message
     div#jesse
         -if(tag=='vue')
             router-view

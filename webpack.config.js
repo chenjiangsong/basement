@@ -34,9 +34,22 @@ module.exports = {
         new ExtractTextPlugin("[name].css")
     ],
     module: {
-
+        loaders:[
+            {
+                test: /\.vue$/, // a regex for matching all files that end in `.vue`
+                loader: 'vue'   // loader to use for matched files
+            }
+        ]
     },
+    babel: {
+       // enable stage 0 babel transforms.
+       presets: ['es2015'],
+    //    plugins: ['transform-runtime']
+   },
     vue: {
-
+        loaders: {
+            css: ExtractTextPlugin.extract("css"),
+            sass: ExtractTextPlugin.extract("css!sass")
+        }
     }
 }

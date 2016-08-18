@@ -1,12 +1,15 @@
-var gulp = require('gulp')
-    webpack = require('webpack')
-    config = require('./webpack.config.js')
-    fse = require('fs-extra')
-    argv = require('yargs').argv
-    path = require('path')
 
+import gulp from 'gulp'
+import webpack from 'webpack'
+import config from './webpack.config.js'
+import fse from 'fs-extra'
+import yargs from 'yargs'
+import path from 'path'
+import colors from 'colors'
 
-var isProduct = false
+const argv = yargs.argv
+
+let isProduct = false
 
 gulp.task('default', () => {
     isProduct = argv.product
@@ -15,7 +18,6 @@ gulp.task('default', () => {
 })
 
 gulp.task('webpack', () => {
-    var minify = [];
 
     if (isProduct) {
         config.watch = false
@@ -27,6 +29,9 @@ gulp.task('webpack', () => {
     }
 
     webpack(config, (err, stats) => {
-        console.log(stats.toString());
+        if (!err) {
+            console.log(`------------webpack success------------`.cyan.bold);
+        }
     })
+
 })
