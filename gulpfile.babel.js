@@ -28,10 +28,17 @@ gulp.task('webpack', () => {
         }))
     }
 
-    webpack(config, (err, stats) => {
-        if (!err) {
-            console.log(`------------webpack success------------`.cyan.bold);
-        }
-    })
+    webpack(config, logback)
 
 })
+
+function logback(err, stats) {
+    // console.log(stats.toString());
+    if (stats.hasErrors() || stats.hasWarnings()) {
+        console.log('\n==============================');
+        console.log(stats.compilation.errors.toString() || stats.compilation.warnings.toString());
+    } else {
+        console.log('--------------------------------------');
+        console.log('webpack success at %s', new Date(stats.endTime).toLocaleString());
+    }
+}
